@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 import joblib
+import os
 
 app = FastAPI(title="ECG Arrhythmia Detection API")
 
@@ -17,9 +18,13 @@ app.add_middleware(
 )
 
 # Load trained model and label encoder
-model = tf.keras.models.load_model("ecg_model.h5")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-label_encoder = joblib.load("label_encoder.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "ecg_model.h5")
+ENCODER_PATH = os.path.join(BASE_DIR, "label_encoder.joblib")
+
+model = tf.keras.models.load_model(MODEL_PATH)
+label_encoder = joblib.load(ENCODER_PATH)
 
 SIGNAL_LEN = 5000
 

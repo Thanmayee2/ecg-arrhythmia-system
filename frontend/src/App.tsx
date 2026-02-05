@@ -19,7 +19,7 @@ type PredictResult = {
 type Mode = "upload" | "stream";
 
 function App() {
-  const BACKEND_URL = "http://127.0.0.1:8000";
+  const BACKEND_URL = "https://ecg-arrhythmia-system-xe83.onrender.com";
   const WS_URL = "ws://127.0.0.1:8000/ws/ecg";
 
   const [mode, setMode] = useState<Mode>("upload");

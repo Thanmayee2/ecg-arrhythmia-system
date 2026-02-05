@@ -21,7 +21,7 @@ app.add_middleware(
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_PATH = os.path.join(BASE_DIR, "ecg_model.h5")
-ENCODER_PATH = os.path.join(BASE_DIR, "label_encoder.joblib")
+ENCODER_PATH = os.path.join(BASE_DIR, "label_encoder.pkl")
 
 model = tf.keras.models.load_model(MODEL_PATH)
 label_encoder = joblib.load(ENCODER_PATH)

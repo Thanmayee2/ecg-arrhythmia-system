@@ -98,7 +98,7 @@ Frontend runs at(locally):
 
 http://localhost:5173
 
-Deployment URLs
+Deployment URLs(Run backend and frontend once, to see the results)
 
 Frontend (Vercel):
 

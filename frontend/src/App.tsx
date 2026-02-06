@@ -20,7 +20,8 @@ type Mode = "upload" | "stream";
 
 function App() {
   const BACKEND_URL = "https://ecg-arrhythmia-system-xe83.onrender.com";
-  const WS_URL = "ws://127.0.0.1:8000/ws/ecg";
+  const WS_URL = "wss://ecg-arrhythmia-system-xe83.onrender.com/ws/ecg";
+
 
   const [mode, setMode] = useState<Mode>("upload");
 
